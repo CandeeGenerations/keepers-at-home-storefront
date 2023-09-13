@@ -1,16 +1,13 @@
 {
-  "name": "medusa-next",
-  "version": "1.0.3",
+  "name": "keepers-at-home-storefront",
+  "version": "1.0.0",
   "private": true,
-  "author": "Kasper Fabricius Kristensen <kasper@medusajs.com> (https://www.medusajs.com)",
-  "description": "Next.js starter to be used with Medusa server",
-  "keywords": [
-    "medusa-storefront"
-  ],
+  "author": "Tyler Candee <tyler@candeegenerations.com> (https://candeegenerations.com)",
+  "description": "Keepers at Home Client - Medusa project",
   "scripts": {
-    "dev": "next dev -p 8000",
-    "build": "next build",
-    "start": "next start -p 8000",
+    "dev": "doppler run --command='NEXT_PUBLIC_APP_VERSION=$npm_package_version next dev -p ${PORT-8000}'",
+    "build": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next build",
+    "start": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next start -p 8000",
     "lint": "next lint",
     "cypress": "cypress open",
     "analyze": "ANALYZE=true next build"
